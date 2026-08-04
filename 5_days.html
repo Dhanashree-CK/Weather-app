@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Day Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">5 Day Forecast for {{ city }}</h1>
+        <div class="forecast">
+            {% for day in forecast %}
+            <div class="card">
+                <h3>{{ day.date }}</h3>
+                <p>🌡️ {{ day.temperature }}°C</p>
+                <p>💧 Humidity: {{ day.humidity }}%</p>
+                <p>🌤️ {{ day.condition }}</p>
+                <img src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="icon">
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/"><button>Back</button></a>
+    </div>
+</body>
+</html>
