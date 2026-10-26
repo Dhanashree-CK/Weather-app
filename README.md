@@ -5,8 +5,6 @@ Yours Truly Weather
 A sleek weather web app built with Python (Flask) that shows the current weather and a 5-day forecast for any city .
 Powered by the OpenWeatherMap API.
 
-Live Demo: https://weather-app-2uah.onrender.com
-
 Features
 Search weather by city name
 Current temperature
